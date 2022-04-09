@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block stylesheets %} {% endblock %}
+    <title>{% block title %}Daniel Escoval{% endblock %}</title>
+</head>
+
+<body>
+    <div id="content" class='container'>
+        <div class="left_side">
+            {% block left_side %}{% endblock %}
+        </div>
+        <div class="right_side">
+            {% block right_side %}{% endblock %}
+        </div>
+    </div>
+    {% comment %} Les icones web {% endcomment %}
+    {% block scripts %}{% endblock %}
+</body>
+</html>

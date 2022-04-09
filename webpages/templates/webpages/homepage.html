@@ -1,0 +1,590 @@
+{%extends "./base.html"%}
+{% load static %}
+
+{% block stylesheets %} <link rel="stylesheet" type="text/css" href="{% static 'webpages/style.css' %}">{% endblock %}
+{% block title %}Daniel Escoval - CV{% endblock %}
+
+{% block left_side %}
+<div class="profileTexte">
+    <div class="imgBx">
+        <img src="static/images/1579356578851.jpg">
+    </div>
+    <h2>Daniel Escoval<br>
+        <span>IT Service Engineer <br> 
+        Project Manager <br> 
+        Full Stack Developer
+        </span>
+    </h2>
+</div>
+
+{% comment %} Information de contact {% endcomment %}
+<div class="contactInfo">
+    <h3 class="title">Informations de contact</h3>
+    <ul>
+        <li>
+            <span class="icon"><i class="fas fa-phone-alt"></i></span>
+            <span class="text">079 851 73 92</span>
+        </li>
+        <li>
+            <span class="icon"><i class="fas fa-envelope"></i></span>
+            <span class="text">daniel.esco92@gmail.com</span>
+        </li>
+        <li>
+            <span class="icon"><i class="fas fa-globe"></i></span>
+            <span class="text">www.danielescoval.ch</span>
+        </li>
+        <li>
+            <span class="icon"><i class="fab fa-linkedin"></i></span>
+            <span class="text">https://www.linkedin.com/in/daniel-escoval/</span>
+        </li>
+        <li>
+            <span class="icon"><i class="far fa-compass"></i></span>
+            <span class="text">Route d'Eguechaudens 8, 1030 Bussigny</span>
+        </li>
+    </ul>
+</div>
+
+{% comment %} Université {% endcomment %}
+<div class="contactInfo education">
+    <h2 class="title">Formation</h2>
+    <h3 class="sub_title">Université</h3>
+    <ul>
+        <li>
+            <h5>2017-2019</h5>
+            <h4>Master en Humanités Digitales</h4>
+            <h4>Université de Lausanne</h4>
+        </li>
+        <li>
+            <h5>2011-2016</h5>
+            <h4>Bachelor ès Lettres</h4>
+            <h6>Français moderne, Histoire & Français médiéval</h6>
+            <h4>Université de Lausanne</h4>
+        </li>
+        <li>
+            <h5>2009-2011</h5>
+            <h4>Maturité fédérale</h4>
+            <h6>Biologie, Chimie et Informatique</h6>
+            <h4>Gymnase de Morges</h4>
+        </li>
+    </ul>
+    <br>
+    {% comment %} À améliorer On devrait voir un seul et cliquer pour plus {% endcomment %}
+    <h3 class="sub_title" onclick="hide_Show(certificats_list)">Certifications & cours</h3>
+    <ul id="certificats_list">
+        <li>
+            <h5>2021</h5>
+            <h4>Azure Fundamentals</h4>
+            <h4>Microsoft</h4>
+        </li>
+        <hr>
+        <li>
+            <h4>LinkedIn Learning</h4>
+        </li>
+        <li>
+            <h5>2022</h5>
+            <h4>Les fondements de la gestion de projet agile</h4>
+            {% comment %} <h4>Linkedin Learning</h4> {% endcomment %}
+        </li>
+        <hr>
+        <li>
+            <h4>Udemy</h4>
+        </li>
+        <li>
+            <h5>2021</h5>
+            <h4>Créer un Outil de Gestion des Projets avec SharePoint Online</h4>
+            {% comment %} <h4>Udemy</h4> {% endcomment %}
+        </li>
+        <li>
+            <h5>2020</h5>
+            <h4>Microsoft Azure de A à Z | Guide Complet</h4>
+            {% comment %} <h4>Udemy</h4> {% endcomment %}
+        </li>
+        <hr>
+        <li>
+            <h4>Jeux Olympiques</h4>
+        </li>
+        <li>
+            <h5>2022</h5>
+            <h4>Certificat de participation</h4>
+            <h4>Beijing 2022</h4>
+        </li>
+        <li>
+            <h5>2021</h5>
+            <h4>Certificat de participation</h4>
+            <h4>Tokyo 2020</h4>
+        </li>
+    </ul>
+</div>
+
+{% comment %} Langues {% endcomment %}
+<div class="contactInfo langue">
+    <h3 class="title">Langues</h3>
+    <ul>
+        <li>
+            <span class="text">Français : </span>
+            <span>Maîtrise parfaite</span>
+            <span class="percent">
+                <div style="width: 100%"></div>
+            </span>
+        </li>
+        <li>
+            <span class="text">Anglais : </span>
+            <span>Maîtrise professionnelle</span>
+            <span class="percent">
+                <div style="width: 90%"></div>
+            </span>
+        </li>
+        <li>
+            <span class="text">Portugais : </span>
+            <span>Langue maternelle</span>
+            <span class="percent">
+                <div style="width: 90%"></div>
+            </span>
+        </li>
+        <li>
+            <span class="text">Allemand : </span>
+            <span>Bonne maîtrise</span>
+            <span class="percent">
+                <div style="width: 65%"></div>
+            </span>
+        </li>
+    </ul>
+</div>
+
+{% comment %} Soft skills {% endcomment %}
+<div class="contactInfo soft_skills">
+    <h3 class="title">Soft skills</h3>
+    <ul>
+        <li>
+            <span class="text">Orienté solution</span>
+        </li>
+        <li>
+            <span class="text">Esprit critique</span>
+        </li>
+        <li>
+            <span class="text">Intelligence émotionnelle</span>
+        </li>
+        <li>
+            <span class="text">Communication</span>
+        </li>
+        <li>
+            <span class="text">Gestion du stress</span>
+        </li>
+        <li>
+            <span class="text">Créativité</span>
+        </li>
+        <li>
+            <span class="text">Team spirit</span>
+        </li>
+        <li>
+            <span class="text">Curiosité</span>
+        </li>
+        <li>
+            <span class="text">Humour</span>
+        </li>
+    </ul>
+</div>
+{% endblock %}
+
+{%block right_side%}
+{% comment %} Mes réalisations {% endcomment %}
+<div class="about">
+    <h2 class="title_2">Mes plus grandes réalisations</h2>
+    <p>Dans le cadre des Jeux Olympiques de Tokyo 2020 et Beijing 2022, j'ai mis en place une base de données des athlètes présents aux Jeux. 
+        J’ai comparé et nourri mes résultats avec les données du terrain ainsi que celles que je pouvais trouver dans des sources libres ou directement du CIO. </p>
+    <p>Hors du cadre des Jeux, j'ai également participé au design et au développement d'une application visant le rapatriement des échantillons antidopage. 
+        J'ai suivi le projet de sa conception à sa mise en production. 
+        Pour ce faire, j'ai participé aux réunions avec le Product Owner ainsi que les différentes parties prenantes afin de construire un produit standardisé et le plus adapté possible aux différents processus. 
+        J'ai ensuite participé aux différents trainings, écrit la documentation et construit les dashboards utilisés au quotidien. </p>
+</div>
+
+<div class="about">
+    <h2 class="title_2">Expérience professionnelle</h2>
+    <div class="box">
+        <div class="year_company">
+            <h5>juillet 2020 - aujourd'hui</h5>
+            <h5>International Testing Agency</h5>
+        </div>
+        <div class="text">
+            <h4>IT Service Engineer</h4>
+            <p>Premier emploi dans le secteur de l’IT. 
+            J’y suis entré afin de me familiariser avec les outils informatiques utilisés en entreprise, notamment avec Microsoft Azure. 
+            À côté du service IT, j’ai participé à la création, mise en production, puis au monitoring d’une application vouée au rapatriement d’échantillons d’antidopage ; participé à l’organisation de l’infrastructure IT pour l’ITA aux Jeux Olympiques de Tokyo 2020 et Beijing 2022 avec la création de dashboards et le monitoring d’une base de données de localisation d’athlètes. 
+            J’ai également participé à l’élaboration d’un système de scraping de données sur Internet ainsi que de leur mise en valeur pour les besoins du business. 
+            J’ai également développé des sites internes pour monitoré des activités internes que ce soit dans le cadre olympique ou plus usuel.</p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="year_company">
+            <h5>janvier 2020 - juillet 2020</h5>
+            <h5>Von Rundstedt & Partmers S.A.</h5>
+        </div>
+        <div class="text">
+            <h4>Office manager & Data analyst</h4>
+            <p>Stage en entreprise. 
+                J’y ai appris comment travailler dans un cadre international, multiculturel et multilingue. 
+                Outre le travail administratif quotidien, je prends part à plusieurs projets dans le domaine de la communication et de la gestion de données. 
+                Je relis tous les documents francophones qu’ils soient voués à la communication interne ou externe. 
+                J’ai également pris part à la gestion de la base de données de l’entreprise qui a pour objectif de la moderniser. </p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="year_company">
+            <h5>septembre 2012 - décembre 2019</h5>
+            <h5>Écoles primaires et secondaires de Rolle, Gland & Nyon</h5>
+        </div>
+        <div class="text">
+            <h4>Professeur remplaçant</h4>
+            <p>En parallèle de mes études, j’ai fait de nombreux remplacements dans différentes écoles, sans distinction de matière. 
+                En plus des remplacements ponctuels, j’ai eu la chance d’en faire des plus longs pendant lesquels, j’étais pris à 100% dans le métier. 
+                L’expérience dont je suis le plus fier reste la création d’un cours d’informatique facultatif pour des élèves de 9ème à 11ème ARMOS.</p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="year_company">
+            <h5>2016 - 2019</h5>
+            <h5>Service civil</h5>
+        </div>
+        <div class="text">
+            <h4>Civiliste</h4>
+            <p>J'ai profité de mon devoir citoyen pour travailler au sein d'EMS et de foyers pour personnes en situation de handicap.
+                Ces différentes expériences m'ont permis de voir et comprendre le monde depuis différents points de vues.
+            </p>
+        </div>
+    </div>
+</div>
+
+{% comment %} À améliorer {% endcomment %}
+<div class="about">
+    <h2 class="title_2">Expérience associative</h2>
+    <div class="box">
+        <div class="year_company">
+            <h5>2021 - aujourd'hui</h5>
+            <h5>ChassCo</h5>
+        </div>
+        <div class="text">
+            <h4>Full Stack Developer</h4>
+            <p>Association en cours de construction. Des amis font partie de l'organe de décision et ont besoin de quelqu'un pour s'occuper du côté IT.</p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="year_company">
+            <h5>2020 - juillet 2022</h5>
+            <h5>Swiss Esport Federation</h5>
+        </div>
+        <div class="text">
+            <h4>Proofreader en français</h4>
+            <p>J'ai mis mes compétences linguistiques au service de la Swiss Esport Federation. Je lis les copies en français ainsi que les originales et corrige tant les erreurs typographiques que la langue. Je m'occupe également de standardiser le document.</p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="year_company">
+            <h5>2017 - 2019</h5>
+            <h5>Association des Étudiant.e.s en Humanités Numériques</h5>
+        </div>
+        <div class="text">
+            <h4>Social Medias & Event manager</h4>
+            <p>Le Master en Humanités Numériques étant un encore très jeune et méconnu du public, nous avions décidé de créer l'Association des Étudiant.e.s en Humanités Numériques.
+                J'ai créé un serveur sur Discord afin de communiquer entre membres, et participé à la création de soirées estudiantines afin de nous faire connaître.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="about skills">
+    <h2>Compétences professionnelles</h2>
+    <div class="box">
+        <h4 style="cursor: pointer;" onclick="hide_Show(python_hide_show)">Python</h4>
+        <div class="percent">
+            <div style="width: 90%;"></div>
+        </div> 
+        <div id="python_hide_show" class="show_hide" style="display: none;">
+            <ul>
+                <li class="sub_skill">Selenium
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 100%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">Pandas
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 90%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">Openpyxl
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 90%;"></div>
+                    </div>
+                </li>
+                    
+                <li class="sub_skill">Django
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 90%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">BeautifulSoup
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 80%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">Matplotlib
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 70%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">Pillow
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 70%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">OpenCV
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 60%;"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+        <h4 style="cursor: pointer;" onclick="hide_Show(ms_office_hide_show)">Microsoft Office Suite</h4>
+        <div class="percent">
+            <div style="width: 90%"></div>
+        </div>
+        <div id="ms_office_hide_show" class="show_hide" style="display: none;">
+            <ul>
+                <li class="sub_skill">Word
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 90%;"></div>
+                    </div>
+                </li>   
+                <li class="sub_skill">PowerPoint
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 90%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">Excel
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 90%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">Outlook
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 90%;"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+        <h4>HTML & CSS</h4>
+        <div class="percent">
+            <div style="width: 85%;"></div>
+        </div>
+    </div>
+    {% comment %} Faire exactement la même  hose que chez Python {% endcomment %}
+    <div class="box">
+        <h4 style="cursor: pointer;" onclick="hide_Show(javascript_hide_show)">Javascript</h4>
+        <div class="percent">
+            <div style="width: 85%"></div>
+        </div>
+        <div id="javascript_hide_show" class="show_hide" style="display: none;">
+            <ul>
+                <li class="sub_skill">D3
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 75%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">Meteor.js
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 20%;"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+     <div class="box">
+        <h4 style="cursor: pointer;" onclick="hide_Show(project_management)">Project Management</h4>
+        <div class="percent">
+            <div style="width: 80%"></div>
+        </div>
+        <div id="project_management" class="show_hide" style="display: none;">
+            <ul>
+                <li class="sub_skill">Création d'user stories
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 60%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">Méthodes agiles
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 50%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">Entretien du backlog
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 40%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">
+                    <div class="sub_app_list">Utilisation d'applications:</div>
+                    <div class="sub_app">Notion
+                        <div class="percent">
+                            <div class="sub_filler" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+        <h4 style="cursor: pointer;" onclick="hide_Show(test_design)">Test design</h4>
+        <div class="percent">
+            <div style="width: 75%"></div>
+        </div>
+        <div id="test_design" class="show_hide" style="display: none;">
+            <ul>
+                <li class="sub_skill">Compréhension de l'architecture de l'application
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 90%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">User Experience
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 80%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">
+                    <div class="sub_app_list">Utilisation d'applications:</div>
+                    <div class="sub_app">Practitest
+                        <div class="percent">
+                            <div class="sub_filler" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+        <h4 style="cursor: pointer;" onclick="hide_Show(ms_power_hide_show)">Microsoft Power Suite</h4>
+        <div class="percent">
+            <div style="width: 70%"></div>
+        </div>
+        <div id="ms_power_hide_show" class="show_hide" style="display: none;">
+            <ul>
+                <li class="sub_skill">SharePoint
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 90%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">PowerBi
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 80%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">Power Automate
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 65%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">Power Apps
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 50%;"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+        <h4 style="cursor: pointer;" onclick="hide_Show(business_analysis)">Business analysis</h4>
+        <div class="percent">
+            <div style="width: 65%"></div>
+        </div>
+        <div id="business_analysis" class="show_hide" style="display: none;">
+            <ul>
+                <li class="sub_skill">
+                    <div class="sub_app_list">Utilisation d'applications:</div>
+                    <div class="sub_app">Elements Cloud
+                        <div class="percent">
+                            <div class="sub_filler" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+        <h4 style="cursor: pointer;" onclick="hide_Show(azure_hide_show)">Microsoft Azure & IT Administration</h4>
+        <div class="percent">
+            <div style="width: 55%"></div>
+        </div>
+        <div id="azure_hide_show" class="show_hide" style="display: none;">
+            <ul>
+                <li class="sub_skill">Azure AD & User management
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 90%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">Virtual Machines management
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 80%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">Exchange & Mailboxes management
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 80%;"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+        <h4 style="cursor: pointer;" onclick="hide_Show(blockain_hide_show)">Blockchain</h4>
+        <div class="percent">
+            <div style="width: 50%"></div>
+        </div>
+        <div id="blockain_hide_show" class="show_hide" style="display: none;">
+            <ul>
+                <li class="sub_skill">Crypto markets
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 50%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">NFTs
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 40%;"></div>
+                    </div>
+                </li>
+                <li class="sub_skill">Solidity
+                    <div class="percent">
+                        <div class="sub_filler" style="width: 30%;"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+        <h4>R</h4>
+        <div class="percent">
+            <div style="width: 25%"></div>
+        </div>
+    </div>
+</div>
+
+<div class="about interest">
+    <h2>Loisirs & intérêts</h2>
+    <ul>
+        <li><i class="fas fa-feather-alt"></i> Poésie & littérature</li>
+        <li><i class="fas fa-dice"></i> Jeux de société</li>
+        <li><i class="fas fa-book"></i >Histoire et Sciences sociales</li>
+        <li><i class="fas fa-gamepad"></i> E-sport & Gaming</li>
+    </ul>
+</div>
+{%endblock%}
+
+{% comment %} Les scripts {% endcomment %}
+{%block scripts%}
+<script src="https://kit.fontawesome.com/8437639767.js" crossorigin="anonymous"></script>
+<script src="{% static 'webpages/script.js' %}"></script>
+
+{% endblock%}
+
+{% comment %} TODO: Créer un contact me {% endcomment %}
