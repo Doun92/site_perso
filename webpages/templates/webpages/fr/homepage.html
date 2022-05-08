@@ -1,0 +1,19 @@
+{%extends "../base.html"%}
+{% load static %}
+{% block stylesheets %} <link rel="stylesheet" type="text/css" href="{% static 'webpages/homepage.css' %}">{% endblock %}
+
+{% block full_page %}
+    <div>
+        <h1>Bienvenue sur mon site personnel !</h1>
+        <h2>Cette page d'accueil est encore en construction.</h2>
+    </div>
+    <h3>Pour t'aider à patienter, tu trouveras ci-dessous une photo de mon chat ainsi qu'une citation philosophique.</h3>
+    <div class="polaroid">
+        <img src={{freyja_pic}}>
+        <div class="citation">"{{citation.0}}", {{citation.1}}</div>
+    </div>
+    <br>
+    <div>
+        Pour la version anglaise, cliquez <a href="{% url 'webpages:homepage_en'%}">ici</a>
+    </div>
+{% endblock %}

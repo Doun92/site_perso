@@ -7,5 +7,8 @@ app_name = 'webpages'
 
 # URL management for the todo list
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.homepage_fr, name='homepage_fr'),
+    path('fr', views.homepage_fr, name='homepage_fr'),
+    path('en', views.homepage_en, name='homepage_en'),
+    path('cv', views.cv, name='cv'),
 ]

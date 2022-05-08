@@ -49,11 +49,15 @@
     <h2 class="title">Formation</h2>
     <h3 class="sub_title">Université</h3>
     <ul>
-        <li>
+        <li onclick="show_image(popup_image_master)">
             <h5>2017-2019</h5>
             <h4>Master en Humanités Digitales</h4>
             <h4>Université de Lausanne</h4>
         </li>
+        <div id='popup_image_master'>
+                <span onclick='show_image(popup_image_master)'>&times;</span>
+                <img src="static/pdfs_pro/Master 1.jpg">
+        </div>
         <li>
             <h5>2011-2016</h5>
             <h4>Bachelor ès Lettres</h4>
@@ -71,47 +75,68 @@
     {% comment %} À améliorer On devrait voir un seul et cliquer pour plus {% endcomment %}
     <h3 class="sub_title" onclick="hide_Show(certificats_list)">Certifications & cours</h3>
     <ul id="certificats_list">
-        <li>
+        <li onclick="show_image(popup_image_azure)">
             <h5>2021</h5>
             <h4>Azure Fundamentals</h4>
             <h4>Microsoft</h4>
+            <div id='popup_image_azure'>
+                <span onclick='show_image(popup_image_azure)'>&times;</span>
+                <img src="static/pdfs_pro/Microsoft_Certified_Professional_Certificate.jpg">
+            </div>
         </li>
         <hr>
         <li>
             <h4>LinkedIn Learning</h4>
         </li>
-        <li>
+        <li onclick="show_image(popup_image_fond_proj_agi)">
             <h5>2022</h5>
             <h4>Les fondements de la gestion de projet agile</h4>
-            {% comment %} <h4>Linkedin Learning</h4> {% endcomment %}
+            <div id='popup_image_fond_proj_agi'>
+                <span onclick='show_image(popup_image_fond_proj_agi)'>&times;</span>
+                <img src="static/pdfs_pro/CertificatDaccomplissement_Les fondements de la gestion de projet agile.jpg">
+            </div>
         </li>
         <hr>
         <li>
             <h4>Udemy</h4>
         </li>
-        <li>
+        <li onclick="show_image(popup_image_UC_SP_proj)">
             <h5>2021</h5>
             <h4>Créer un Outil de Gestion des Projets avec SharePoint Online</h4>
-            {% comment %} <h4>Udemy</h4> {% endcomment %}
+            <div id='popup_image_UC_SP_proj'>
+                <span onclick='show_image(popup_image_UC_SP_proj)'>&times;</span>
+                <img src="static/pdfs_pro/UC-522d97ef-20d9-41ae-90a5-f492b1dbece7.jpg">
+            </div>
         </li>
-        <li>
+        <li onclick="show_image(popup_image_UC_Azure)">
             <h5>2020</h5>
             <h4>Microsoft Azure de A à Z | Guide Complet</h4>
-            {% comment %} <h4>Udemy</h4> {% endcomment %}
+            <div id='popup_image_UC_Azure'>
+                <span onclick='show_image(popup_image_UC_Azure)'>&times;</span>
+                <img src="static/pdfs_pro/UC-db4e57e5-60ec-46ff-a0cc-79608a1b49db.jpg">
+            </div>
         </li>
         <hr>
         <li>
             <h4>Jeux Olympiques</h4>
         </li>
-        <li>
+        <li onclick="show_image(popup_image_beijing_2022)">
             <h5>2022</h5>
             <h4>Certificat de participation</h4>
             <h4>Beijing 2022</h4>
+            <div id='popup_image_beijing_2022'>
+                <span onclick='show_image(popup_image_beijing_2022)'>&times;</span>
+                <img src="static/pdfs_pro/Beijing_certificate.jpg">
+            </div>
         </li>
-        <li>
+        <li onclick="show_image(popup_image_tokyo_2020)">
             <h5>2021</h5>
             <h4>Certificat de participation</h4>
             <h4>Tokyo 2020</h4>
+            <div id='popup_image_tokyo_2020'>
+                <span onclick='show_image(popup_image_tokyo_2020)'>&times;</span>
+                <img src="static/pdfs_pro/ParticipationCertificate-OLY-1462992.jpg">
+            </div>
         </li>
     </ul>
 </div>
@@ -214,7 +239,7 @@
             J’ai également développé des sites internes pour monitoré des activités internes que ce soit dans le cadre olympique ou plus usuel.</p>
         </div>
     </div>
-    <div class="box">
+    <div class="box" onclick="show_image(popup_image_von_Rund)">
         <div class="year_company">
             <h5>janvier 2020 - juillet 2020</h5>
             <h5>Von Rundstedt & Partmers S.A.</h5>
@@ -227,6 +252,10 @@
                 Je relis tous les documents francophones qu’ils soient voués à la communication interne ou externe. 
                 J’ai également pris part à la gestion de la base de données de l’entreprise qui a pour objectif de la moderniser. </p>
         </div>
+        <div id='popup_image_von_Rund'>
+                <span onclick='show_image(popup_image_von_Rund)'>&times;</span>
+                <img src="static/pdfs_pro/Work Certificate Von Rundstedt.jpeg">
+            </div>
     </div>
     <div class="box">
         <div class="year_company">

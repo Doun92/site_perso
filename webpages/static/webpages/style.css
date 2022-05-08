@@ -324,6 +324,54 @@ p{
     width: 20px;
 }
 
+/* Image pop up */
+#popup_image_master,
+#popup_image_azure,
+#popup_image_fond_proj_agi,
+#popup_image_UC_SP_proj,
+#popup_image_UC_Azure,
+#popup_image_beijing_2022,
+#popup_image_tokyo_2020,
+#popup_image_von_Rund{
+    position: fixed;
+    top: 10px; left: 10%;
+    background: rgba(0,0,0,0.9);
+    height: 100%;
+    width: 80%;
+    z-index: 100;
+    display: none;
+}
+#popup_image_master span,
+#popup_image_azure span,
+#popup_image_fond_proj_agi span,
+#popup_image_UC_SP_proj span,
+#popup_image_UC_Azure span,
+#popup_image_beijing_2022 span,
+#popup_image_tokyo_2020 span,
+#popup_image_von_Rund span{
+    position: absolute;
+    top: 0; right: 10;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #000;
+    cursor: pointer;
+    z-index: 100;
+}
+#popup_image_master img,
+#popup_image_azure img,
+#popup_image_fond_proj_agi img,
+#popup_image_UC_SP_proj img,
+#popup_image_UC_Azure img,
+#popup_image_beijing_2022 img,
+#popup_image_tokyo_2020 img 
+#popup_image_von_Rund img{
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* Pour les tablettes */
 @media (max-width: 1000px){
     .container{
@@ -342,11 +390,24 @@ p{
     }
     .about .box .year_company{
         margin-bottom: 5px;
+        padding: 2px;
     }
     .interest ul{
         grid-template-columns: repeat(1, 1fr);
     }
     .skills .box{
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* Popup pour téléphone */
+    #popup_image_master,
+    #popup_image_azure,
+    #popup_image_fond_proj_agi,
+    #popup_image_UC_SP_proj,
+    #popup_image_UC_Azure,
+    #popup_image_beijing_2022,
+    #popup_image_tokyo_2020,
+    #popup_image_von_Rund{
+        width: 75%;
     }
 }

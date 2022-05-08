@@ -1,0 +1,19 @@
+{%extends "../base.html"%}
+{% load static %}
+{% block stylesheets %} <link rel="stylesheet" type="text/css" href="{% static 'webpages/homepage.css' %}">{% endblock %}
+
+{% block full_page %}
+    <div>
+        <h1>Welcome to my personal website !</h1>
+        <h2>You came to my homepage which is still under construction.</h2>
+    </div>
+    <h3>For helping you to wait, please find here a picture of my cat and a philosophical phrase.</h3>
+    <div class="polaroid">
+        <img src={{freyja_pic}}>
+        <div class="citation">"{{citation.0}}", {{citation.1}}</div>
+    </div>
+    <br>
+    <div>
+        For the French version, click <a href="{% url 'webpages:homepage_fr'%}">here</a>
+    </div>
+{% endblock %}

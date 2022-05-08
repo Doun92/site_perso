@@ -7,15 +7,19 @@
 </head>
 
 <body>
-    <div id="content" class='container'>
-        <div class="left_side">
-            {% block left_side %}{% endblock %}
+    <div>
+        {% block full_page %}
+        <div id="content" class='container'>
+            <div class="left_side">
+                {% block left_side %}{% endblock %}
+            </div>
+            <div class="right_side">
+                {% block right_side %}{% endblock %}
+            </div>
         </div>
-        <div class="right_side">
-            {% block right_side %}{% endblock %}
-        </div>
+        {% comment %} Les icones web {% endcomment %}
+        {% block scripts %}{% endblock %}
+        {% endblock %}
     </div>
-    {% comment %} Les icones web {% endcomment %}
-    {% block scripts %}{% endblock %}
 </body>
 </html>
