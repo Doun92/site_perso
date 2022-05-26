@@ -332,6 +332,7 @@ p{
 #popup_image_UC_Azure,
 #popup_image_beijing_2022,
 #popup_image_tokyo_2020,
+#popup_image_project_mgmt,
 #popup_image_von_Rund{
     position: fixed;
     top: 10px; left: 10%;
@@ -348,28 +349,32 @@ p{
 #popup_image_UC_Azure span,
 #popup_image_beijing_2022 span,
 #popup_image_tokyo_2020 span,
+#popup_image_project_mgmt span,
 #popup_image_von_Rund span{
     position: absolute;
     top: 0; right: 10;
-    font-size: 60px;
+    font-size: 80px;
     font-weight: bolder;
     color: #000;
     cursor: pointer;
     z-index: 100;
 }
+
 #popup_image_master img,
 #popup_image_azure img,
 #popup_image_fond_proj_agi img,
 #popup_image_UC_SP_proj img,
 #popup_image_UC_Azure img,
 #popup_image_beijing_2022 img,
-#popup_image_tokyo_2020 img 
+#popup_image_tokyo_2020 img,
+#popup_image_project_mgmt img,
 #popup_image_von_Rund img{
-    height: 90%;
-    width: 90%;
+    height: 85%;
+    width: 85%;
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
+    display: none;
 }
 
 /* Pour les tablettes */
@@ -407,6 +412,7 @@ p{
     #popup_image_UC_Azure,
     #popup_image_beijing_2022,
     #popup_image_tokyo_2020,
+    #popup_image_project_mgmt,
     #popup_image_von_Rund{
         width: 75%;
     }

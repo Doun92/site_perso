@@ -10,9 +10,11 @@
         <img src="static/images/1579356578851.jpg">
     </div>
     <h2>Daniel Escoval<br>
-        <span>IT Service Engineer <br> 
-        Project Manager <br> 
-        Full Stack Developer
+        <span>
+            IT Service Engineer <br> 
+            Project Manager <br> 
+            Full Stack Developer <br>
+            Data Analyst
         </span>
     </h2>
 </div>
@@ -72,73 +74,61 @@
         </li>
     </ul>
     <br>
-    {% comment %} À améliorer On devrait voir un seul et cliquer pour plus {% endcomment %}
     <h3 class="sub_title" onclick="hide_Show(certificats_list)">Certifications & cours</h3>
-    <ul id="certificats_list">
-        <li onclick="show_image(popup_image_azure)">
-            <h5>2021</h5>
-            <h4>Azure Fundamentals</h4>
-            <h4>Microsoft</h4>
-            <div id='popup_image_azure'>
-                <span onclick='show_image(popup_image_azure)'>&times;</span>
-                <img src="static/pdfs_pro/Microsoft_Certified_Professional_Certificate.jpg">
-            </div>
-        </li>
-        <hr>
-        <li>
-            <h4>LinkedIn Learning</h4>
-        </li>
-        <li onclick="show_image(popup_image_fond_proj_agi)">
-            <h5>2022</h5>
-            <h4>Les fondements de la gestion de projet agile</h4>
-            <div id='popup_image_fond_proj_agi'>
-                <span onclick='show_image(popup_image_fond_proj_agi)'>&times;</span>
-                <img src="static/pdfs_pro/CertificatDaccomplissement_Les fondements de la gestion de projet agile.jpg">
-            </div>
-        </li>
-        <hr>
-        <li>
-            <h4>Udemy</h4>
-        </li>
-        <li onclick="show_image(popup_image_UC_SP_proj)">
-            <h5>2021</h5>
-            <h4>Créer un Outil de Gestion des Projets avec SharePoint Online</h4>
-            <div id='popup_image_UC_SP_proj'>
-                <span onclick='show_image(popup_image_UC_SP_proj)'>&times;</span>
-                <img src="static/pdfs_pro/UC-522d97ef-20d9-41ae-90a5-f492b1dbece7.jpg">
-            </div>
-        </li>
-        <li onclick="show_image(popup_image_UC_Azure)">
-            <h5>2020</h5>
-            <h4>Microsoft Azure de A à Z | Guide Complet</h4>
-            <div id='popup_image_UC_Azure'>
-                <span onclick='show_image(popup_image_UC_Azure)'>&times;</span>
-                <img src="static/pdfs_pro/UC-db4e57e5-60ec-46ff-a0cc-79608a1b49db.jpg">
-            </div>
-        </li>
-        <hr>
-        <li>
-            <h4>Jeux Olympiques</h4>
-        </li>
-        <li onclick="show_image(popup_image_beijing_2022)">
-            <h5>2022</h5>
-            <h4>Certificat de participation</h4>
-            <h4>Beijing 2022</h4>
-            <div id='popup_image_beijing_2022'>
-                <span onclick='show_image(popup_image_beijing_2022)'>&times;</span>
-                <img src="static/pdfs_pro/Beijing_certificate.jpg">
-            </div>
-        </li>
-        <li onclick="show_image(popup_image_tokyo_2020)">
-            <h5>2021</h5>
-            <h4>Certificat de participation</h4>
-            <h4>Tokyo 2020</h4>
-            <div id='popup_image_tokyo_2020'>
-                <span onclick='show_image(popup_image_tokyo_2020)'>&times;</span>
-                <img src="static/pdfs_pro/ParticipationCertificate-OLY-1462992.jpg">
-            </div>
-        </li>
-    </ul>
+    <h4>Certifications<h4>
+    {%for certif in certifications%}
+        <ul id="certificats_list">
+            {%if certif.type_document == 'Certification'%}
+            <li onclick="show_image({{certif.balise}})">
+                <h5>{{certif.année}}</h5>
+                <h4>{{certif.nom_certif}}</h4>
+                <h4>{{certif.entreprise}}</h4>
+                <div id='{{certif.balise}}'>
+                    <span onclick='show_image({{certif.balise}})'>&times;</span>
+                    <img src="static/pdfs_pro/Certifications/{{certif.fichier}}">
+                </div>
+            </li>
+            {%endif%}
+        </ul>
+    {%endfor%}
+    <hr> <br>
+    <h4>Cours<h4>
+    {%for certif in certifications %}
+        <ul id="certificats_list">
+            {%if certif.type_document == 'Cours'%}
+            <li onclick="show_image({{certif.balise}})">
+                <h5>{{certif.année}}</h5>
+                <h4>{{certif.nom_certif}}</h4>
+                <h4>{{certif.entreprise}}</h4>
+                <div id='{{certif.balise}}'>
+                    <span onclick='show_image({{certif.balise}})'>&times;</span>
+                    <img src="static/pdfs_pro/Cours/{{certif.fichier}}">
+                </div>
+                {% comment %} <p>static/pdfs_pro/Cours/{{certif.fichier}}</p>
+                <p>{{certif.balise}}</p> {% endcomment %}
+            </li>
+            {%endif%}
+        </ul>
+    {%endfor%}
+    <hr> <br>
+    <h4>Évènements</h4>
+    {%for certif in certifications %}
+        <ul id="certificats_list">
+            {%if certif.type_document == 'Évènement'%}
+            <li onclick="show_image({{certif.balise}})">
+                <h5>{{certif.année}}</h5>
+                <h4>{{certif.nom_certif}}</h4>
+                <h4>{{certif.entreprise}}</h4>
+                <div id='{{certif.balise}}'>
+                    <span onclick='show_image({{certif.balise}})'>&times;</span>
+                    <img src="static/pdfs_pro/Évènement/{{certif.fichier}}">
+                </div>
+                {% comment %} <p>static/pdfs_pro/Cours/{{certif.fichier}}</p>
+                <p>{{certif.balise}}</p> {% endcomment %}
+            </li>
+            {%endif%}
+        </ul>
+    {%endfor%}
 </div>
 
 {% comment %} Langues {% endcomment %}
@@ -225,99 +215,63 @@
 
 <div class="about">
     <h2 class="title_2">Expérience professionnelle</h2>
-    <div class="box">
-        <div class="year_company">
-            <h5>juillet 2020 - aujourd'hui</h5>
-            <h5>International Testing Agency</h5>
-        </div>
-        <div class="text">
-            <h4>IT Service Engineer</h4>
-            <p>Premier emploi dans le secteur de l’IT. 
-            J’y suis entré afin de me familiariser avec les outils informatiques utilisés en entreprise, notamment avec Microsoft Azure. 
-            À côté du service IT, j’ai participé à la création, mise en production, puis au monitoring d’une application vouée au rapatriement d’échantillons d’antidopage ; participé à l’organisation de l’infrastructure IT pour l’ITA aux Jeux Olympiques de Tokyo 2020 et Beijing 2022 avec la création de dashboards et le monitoring d’une base de données de localisation d’athlètes. 
-            J’ai également participé à l’élaboration d’un système de scraping de données sur Internet ainsi que de leur mise en valeur pour les besoins du business. 
-            J’ai également développé des sites internes pour monitoré des activités internes que ce soit dans le cadre olympique ou plus usuel.</p>
-        </div>
-    </div>
-    <div class="box" onclick="show_image(popup_image_von_Rund)">
-        <div class="year_company">
-            <h5>janvier 2020 - juillet 2020</h5>
-            <h5>Von Rundstedt & Partmers S.A.</h5>
-        </div>
-        <div class="text">
-            <h4>Office manager & Data analyst</h4>
-            <p>Stage en entreprise. 
-                J’y ai appris comment travailler dans un cadre international, multiculturel et multilingue. 
-                Outre le travail administratif quotidien, je prends part à plusieurs projets dans le domaine de la communication et de la gestion de données. 
-                Je relis tous les documents francophones qu’ils soient voués à la communication interne ou externe. 
-                J’ai également pris part à la gestion de la base de données de l’entreprise qui a pour objectif de la moderniser. </p>
-        </div>
-        <div id='popup_image_von_Rund'>
-                <span onclick='show_image(popup_image_von_Rund)'>&times;</span>
-                <img src="static/pdfs_pro/Work Certificate Von Rundstedt.jpeg">
+    {%for exp in expériences %}
+        {%if exp.type_expérience == 'Pro'%}
+            {%if exp.div_tag is null%}
+                <div class="box">
+                    <div class="year_company">
+                        <h5>{{exp.de_année}} - {{exp.à_année}}</h5>
+                        <h5>{{exp.entreprise}}</h5>
+                    </div>
+                    <div class="text">
+                        <h4>{{exp.titre}}</h4>
+                        <div>
+                            {{exp.description|safe}}
+                        </div>
+                    </div>
+                </div>
+            {%else%}
+            <div onclick='show_image({{exp.div_tag}})'>
+                <div class="box">
+                    <div class="year_company">
+                        <h5>{{exp.de_année}} - {{exp.à_année}}</h5>
+                        <h5>{{exp.entreprise}}</h5>
+                    </div>
+                    <div class="text">
+                        <h4>{{exp.titre}}</h4>
+                        <div>
+                            {{exp.description|safe}}
+                        </div>
+                    </div>
+                    <div id='{{exp.div_tag}}'>
+                        <span onclick='show_image({{exp.div_tag}})'>&times;</span>
+                        <img src="static/pdfs_pro/Travail/{{exp.fichier}}">
+                    </div>
+                </div>
             </div>
-    </div>
-    <div class="box">
-        <div class="year_company">
-            <h5>septembre 2012 - décembre 2019</h5>
-            <h5>Écoles primaires et secondaires de Rolle, Gland & Nyon</h5>
-        </div>
-        <div class="text">
-            <h4>Professeur remplaçant</h4>
-            <p>En parallèle de mes études, j’ai fait de nombreux remplacements dans différentes écoles, sans distinction de matière. 
-                En plus des remplacements ponctuels, j’ai eu la chance d’en faire des plus longs pendant lesquels, j’étais pris à 100% dans le métier. 
-                L’expérience dont je suis le plus fier reste la création d’un cours d’informatique facultatif pour des élèves de 9ème à 11ème ARMOS.</p>
-        </div>
-    </div>
-    <div class="box">
-        <div class="year_company">
-            <h5>2016 - 2019</h5>
-            <h5>Service civil</h5>
-        </div>
-        <div class="text">
-            <h4>Civiliste</h4>
-            <p>J'ai profité de mon devoir citoyen pour travailler au sein d'EMS et de foyers pour personnes en situation de handicap.
-                Ces différentes expériences m'ont permis de voir et comprendre le monde depuis différents points de vues.
-            </p>
-        </div>
-    </div>
+            {%endif%}
+        {%endif%}
+    {%endfor%}
 </div>
 
-{% comment %} À améliorer {% endcomment %}
 <div class="about">
     <h2 class="title_2">Expérience associative</h2>
-    <div class="box">
-        <div class="year_company">
-            <h5>2021 - aujourd'hui</h5>
-            <h5>ChassCo</h5>
+    {%for exp in expériences %}
+        {%if exp.type_expérience == 'Assoc'%}
+        <div class="box">
+            <div class="year_company">
+                <h5>{{exp.de_année}} - {{exp.à_année}}</h5>
+                <h5>{{exp.entreprise}}</h5>
+            </div>
+            <div class="text">
+                <h4>{{exp.titre}}</h4>
+                <div>
+                    {{exp.description|safe}}
+                </div>
+            </div>
         </div>
-        <div class="text">
-            <h4>Full Stack Developer</h4>
-            <p>Association en cours de construction. Des amis font partie de l'organe de décision et ont besoin de quelqu'un pour s'occuper du côté IT.</p>
-        </div>
-    </div>
-    <div class="box">
-        <div class="year_company">
-            <h5>2020 - juillet 2022</h5>
-            <h5>Swiss Esport Federation</h5>
-        </div>
-        <div class="text">
-            <h4>Proofreader en français</h4>
-            <p>J'ai mis mes compétences linguistiques au service de la Swiss Esport Federation. Je lis les copies en français ainsi que les originales et corrige tant les erreurs typographiques que la langue. Je m'occupe également de standardiser le document.</p>
-        </div>
-    </div>
-    <div class="box">
-        <div class="year_company">
-            <h5>2017 - 2019</h5>
-            <h5>Association des Étudiant.e.s en Humanités Numériques</h5>
-        </div>
-        <div class="text">
-            <h4>Social Medias & Event manager</h4>
-            <p>Le Master en Humanités Numériques étant un encore très jeune et méconnu du public, nous avions décidé de créer l'Association des Étudiant.e.s en Humanités Numériques.
-                J'ai créé un serveur sur Discord afin de communiquer entre membres, et participé à la création de soirées estudiantines afin de nous faire connaître.
-            </p>
-        </div>
-    </div>
+        {%endif%}
+    {%endfor%}
 </div>
 
 <div class="about skills">

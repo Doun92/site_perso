@@ -1,0 +1,8 @@
+{% for poème in poèmes%}
+    {% comment %} {{recueil}} {% endcomment %}
+    {% comment %} <p>{{poème.titre}}</p> {% endcomment %}
+    {% comment %} <p>{{poème.id}}</p> {% endcomment %}
+    <a href="{{recueil}}/{{poème.id}}">{{poème.titre}}</a>
+{% endfor %}
+
+{% comment %} {{test.0}} {% endcomment %}
